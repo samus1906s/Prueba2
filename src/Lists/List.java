@@ -9,6 +9,7 @@ package Lists;
  * @author Eduard Salas Murillo
  */
 public interface List <T> {
-
-public void showAll();    
+    public void showAll();    
+    public boolean add(T t);
+    public T find(Object id);
 }
