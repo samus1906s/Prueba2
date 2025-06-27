@@ -6,10 +6,17 @@ package Lists;
 
 /**
  *
+<<<<<<< HEAD
  * @author Brandon Valdelomar
  */
+
+    
+
 public interface List <T> {
-    
+    public void showAll();    
+    public boolean add(T t);
+    public T find(Object id);
     public boolean remove (T t);
-    
+
+
 }
