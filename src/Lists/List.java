@@ -6,8 +6,17 @@ package Lists;
 
 /**
  *
+<<<<<<< HEAD
  * @author je110
  */
 public interface List {
     
+=======
+<<<<<<< HEAD
+ * @author samue, jespinoza
+ */
+public interface List <T> {
+    public boolean add(T t);
+    public T find(Object id);
+>>>>>>> temp
 }
