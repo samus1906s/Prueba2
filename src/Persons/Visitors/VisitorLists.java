@@ -23,8 +23,12 @@ public class VisitorLists implements List <Visitor> {
     @Override
     public boolean add(Visitor t) {
         
+        if (find(t.getId()) != null) {
+        return false; 
+        }
+        
         for (int i = 0; i < visits.length; i++){
-            if (visits[i] == null ){
+            if (visits[i] == null){
                 visits[i] = t;
                 return true;
             }
@@ -35,8 +39,9 @@ public class VisitorLists implements List <Visitor> {
     @Override
     public Visitor find(Object id) {
        
+        String idString = String.valueOf(id);
         for (int i = 0; i < visits.length; i++){
-            if (visits[i] != null && visits[i].getId().equals(id)){
+            if (visits[i] != null && String.valueOf(visits[i].getId()).equals(idString)){
               return visits[i];
             }
         }
@@ -45,6 +50,10 @@ public class VisitorLists implements List <Visitor> {
 
     @Override
     public boolean remove(Visitor t) {
+        
+        if (find(t.getId()) != null) {
+        return false; 
+        }
         
         for (int i = 0; i < visits.length; i++){
             if (visits[i] != null && visits[i].equals(t)){
